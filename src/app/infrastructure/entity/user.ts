@@ -3,7 +3,7 @@ import { SetupServer } from "./../../../config/index";
 const Sequelize = SetupServer.getSequelize();
 import UUIDV4 from '@sequelize/core';
 
-const User = Sequelize.define("Users", {
+const User = Sequelize.define("user", {
     id: {
         allowNull: false,
         primaryKey: true,
