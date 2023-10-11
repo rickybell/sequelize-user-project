@@ -1,16 +1,7 @@
-import express from "express"
-import logger from "morgan"
-import path from "path"
+import { SetupServer } from "./config";
 
-const app = express()
-const port = 4000
+const setupServer = new SetupServer();
 
-app.use(logger("tiny"))
-
-app.get("/", (_req, res) => {
-    res.sendFile(path.join(__dirname, "app/views","index.html"))
-})
-
-app.listen(port, () =>
-  console.log(`The server is listning on port ${port}`)
-)
+setupServer.init();
+console.log("SetupServer.getSequelize().sync()");
+SetupServer.getSequelize().sync();
