@@ -11,13 +11,14 @@
       "@filters/*": ["src/app/filter/*"],
       "@mappers/*": ["src/app/mapper/*"],
       "@services/*": ["src/app/service/*"],
-      "@domains/*": ["src/domain/*"],
-      "@enumrations/*": ["src/domain/enumeration/*"],
+      "@domains/*": ["src/app/domain/*"],
+      "@enumrations/*": ["src/app/domain/enumeration/*"],
       "@auths/*": ["src/domain/auth/*"],
-      "@entities/*": ["src/infrastructure/entity/*"],
-      "@repositories/*": ["src/infrastructure/repository/*"],
+      "@entities/*": ["src/app/infrastructure/entity/*"],
+      "@models/*": ["src/app/infrastructure/models/*"],
+      "@repositories/*": ["src/app/infrastructure/repository/*"],
+      "@views/*": ["src/app/views/*"],
       "@configs/*": ["src/config/*"],
-      "@views/*": ["src/views/*"],
     }
   }
 }

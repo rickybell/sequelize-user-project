@@ -1,4 +1,4 @@
-import User from "./app/infrastructure/entity/user";
+import { UserEntity } from "@entities/index";
 import { SetupServer } from "./config";
 
 const setupServer = new SetupServer();
@@ -6,5 +6,5 @@ const setupServer = new SetupServer();
 setupServer.init();
 
 (async (): Promise<void> => {
-    User.sync();
+    UserEntity.sync();
 })();

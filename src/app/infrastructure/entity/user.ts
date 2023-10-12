@@ -1,9 +1,9 @@
 import { STRING, TEXT, UUID } from "sequelize";
-import { SetupServer } from "./../../../config/index";
-const Sequelize = SetupServer.getSequelize();
+import { SetupServer } from "@configs/index";
 import UUIDV4 from '@sequelize/core';
+const Sequelize = SetupServer.getSequelize();
 
-const User = Sequelize.define("user", {
+const UserEntity = Sequelize.define("user", {
     id: {
         allowNull: false,
         primaryKey: true,
@@ -34,4 +34,4 @@ const User = Sequelize.define("user", {
     }
 });
 
-export default User;
+export default UserEntity;

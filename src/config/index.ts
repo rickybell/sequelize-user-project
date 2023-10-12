@@ -5,8 +5,6 @@ import logger from "morgan";
 import config from "config";
 import { Sequelize } from 'sequelize';
 import { MainController } from '@api/resource/main';
-
-
 export class SetupServer extends Server {
     static sequelize: Sequelize;
     constructor(private port = 4000) {
@@ -34,9 +32,9 @@ export class SetupServer extends Server {
 
     static getSequelize(): Sequelize {
         SetupServer.sequelize = new Sequelize(config.get("config.Sequelize"));
-        return this.sequelize;
+        return SetupServer.sequelize;
     }
-
+    
     private setupControllers(): void {
         const mainController = new MainController();
         this.addControllers([mainController]);
