@@ -2,7 +2,7 @@ import { Controller, Get } from "@overnightjs/core";
 import { Request, Response } from "express";
 import path from "path"
 
-@Controller('main')
+@Controller('')
 export class MainController {
 
     @Get('')
