@@ -11,6 +11,8 @@ export const config = {
             min: 0,
             idle: 10000
         },
-        timezone: "+01:00"
+        timezone: "+01:00",
+        // models: ["@entities"],
+        models: [__dirname + "/../src/app/infrastructure/entity"],
     },
 };

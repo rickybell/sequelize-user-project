@@ -1,3 +1,5 @@
+import UserEntity from "@entities/user";
+
 export type WithId<T> = { id: string } & T;
 
 export type FilterOptions = Record<string, unknown>;
@@ -9,3 +11,7 @@ export interface BaseRepository<T> {
     // find(options: FilterOptions): Promise<WithId<T>[]>;
     // deleteAll(): Promise<void>;
   }
+
+export interface UserRepository extends BaseRepository<UserEntity> { 
+  findAll(): Promise<WithId<UserEntity> | undefined>;
+}

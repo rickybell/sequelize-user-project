@@ -1,4 +1,4 @@
-// import { UserEntity } from "@entities/index";
+// import { User } from "@entities/index";
 import { SetupServer } from "./config";
 
 const setupServer = new SetupServer();

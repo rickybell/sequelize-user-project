@@ -2,7 +2,8 @@
   "extends": "./tsconfig.paths.json",
   "compilerOptions": {
     "module": "commonjs",
-    "lib": ["ESNext"],
+    // "lib": ["ESNext"],
+    "lib": ["ES2015"],
     "moduleResolution": "node",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
